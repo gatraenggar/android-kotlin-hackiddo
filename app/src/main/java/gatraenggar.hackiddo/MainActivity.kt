@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
             val name = nameEditText.text.toString()
             welcomeNameTextView.text = resources.getString(R.string.welcomeNameTextView, name)
-            submitNameButton.setBackgroundColor(resources.getColor(R.color.hackiddoTheme))
+            submitNameButton.setBackgroundColor(resources.getColor(R.color.black, theme))
         }
     }
 }
