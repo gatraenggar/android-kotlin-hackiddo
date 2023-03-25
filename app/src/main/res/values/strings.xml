@@ -1,0 +1,10 @@
+<resources>
+    <string name="appName">Hackiddo</string>
+    <string name="enterTextView">Enter your name</string>
+    <string name="submitTextButton">Submit</string>
+    <string name="welcomeNameTextView">Welcome, %1$s</string>
+    <string-array name="LogStringArray">
+        <item>Hackiddo #1</item>
+        <item>Hackiddo #2</item>
+    </string-array>
+</resources>
