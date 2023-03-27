@@ -1,5 +1,6 @@
 package gatraenggar.hackiddo
 
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,14 +19,24 @@ class MainActivity : AppCompatActivity() {
         welcomeNameTextView = findViewById(R.id.welcomeNameTextView)
     }
 
+    private fun checkFingerPrint() {
+        if (packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)) {
+            Log.i("Feature", "Feature Fingerprint is ON")
+        } else {
+            Log.w("Feature", "Feature Fingerprint is OFF")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hackiddo)
 
         initComponents()
 
+        checkFingerPrint()
+
         submitNameButton.setOnClickListener {
-            Log.i("HCKD", "button is clicked")
+            Log.i("Listener", "button is clicked")
 
             resources.getStringArray(R.array.LogStringArray).forEach {
                 Log.i("LogStringArray", it)
