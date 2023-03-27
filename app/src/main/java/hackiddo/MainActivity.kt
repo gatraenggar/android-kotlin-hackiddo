@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
     private fun checkPlatformVersion() {
         Log.i("SDK", Build.VERSION.SDK_INT.toString())
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
-            Log.w("PlatformVersion", "Some features is not available in this version")
         }
     }
 
@@ -42,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         initComponents()
 
         checkFingerPrint()
-        checkPlatformVersion()
 
         submitNameButton.setOnClickListener {
             Log.i("Listener", "button is clicked")
