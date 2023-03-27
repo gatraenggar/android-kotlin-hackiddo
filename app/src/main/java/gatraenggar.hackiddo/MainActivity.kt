@@ -34,8 +34,12 @@ class MainActivity : AppCompatActivity() {
             val json = assets.open("sample.json")
                 .bufferedReader()
                 .use { it.readText() }
-
             Log.i("AssetManager", json)
+
+            val jsonRaw = resources.openRawResource(R.raw.sample)
+                .bufferedReader()
+                .use { it.readText() }
+            Log.i("RawResource", jsonRaw)
 
             val name = nameEditText.text.toString()
             welcomeNameTextView.text = resources.getString(R.string.welcomeNameTextView, name)
