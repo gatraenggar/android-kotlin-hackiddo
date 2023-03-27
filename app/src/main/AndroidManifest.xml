@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="gatraenggar.hackiddo">
 
+    <uses-feature android:name="android.hardware.fingerprint" android:required="true"/>
+
     <application
         android:name=".HackiddoApp"
         android:allowBackup="true"
