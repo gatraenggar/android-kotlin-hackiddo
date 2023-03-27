@@ -31,6 +31,12 @@ class MainActivity : AppCompatActivity() {
                 Log.i("LogStringArray", it)
             }
 
+            val json = assets.open("sample.json")
+                .bufferedReader()
+                .use { it.readText() }
+
+            Log.i("AssetManager", json)
+
             val name = nameEditText.text.toString()
             welcomeNameTextView.text = resources.getString(R.string.welcomeNameTextView, name)
             submitNameButton.setBackgroundColor(resources.getColor(R.color.black, theme))
